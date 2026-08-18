@@ -1,0 +1,37 @@
+﻿<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/stockwaage/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <title>Stockwaage</title>
+    <script>
+      (function () {
+        try {
+          if ("serviceWorker" in navigator) {
+            navigator.serviceWorker.getRegistrations().then(function (regs) {
+              regs.forEach(function (r) { r.unregister(); });
+            });
+          }
+          if (window.caches && caches.keys) {
+            caches.keys().then(function (keys) {
+              keys.forEach(function (k) { caches.delete(k); });
+            });
+          }
+        } catch (e) {}
+      })();
+    </script>
+    <script type="module" crossorigin src="/stockwaage/assets/index-XncxB8bE.js"></script>
+    <link rel="modulepreload" crossorigin href="/stockwaage/assets/rolldown-runtime-QTnfLwEv.js">
+    <link rel="modulepreload" crossorigin href="/stockwaage/assets/charts-nLZn1qXZ.js">
+    <link rel="modulepreload" crossorigin href="/stockwaage/assets/react-D23uAyex.js">
+    <link rel="modulepreload" crossorigin href="/stockwaage/assets/xlsx-DyzpkVPi.js">
+    <link rel="stylesheet" crossorigin href="/stockwaage/assets/index-x1XGuNl0.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
